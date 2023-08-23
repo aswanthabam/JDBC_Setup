@@ -2,7 +2,9 @@ echo "Downloadin dependencies ..."
 sudo apt install openjdk-8-jdk-headless
 sudo apt install mysql-server
 
+wget https://raw.githubusercontent.com/aswanthabam/JDBC_Setup/main/mysql.sql -o mysql.sql
 sudo mysql < ./mysql.sql
+rm mysql.sql
 
 echo "Mysql credentials"
 echo "User name: gct"
