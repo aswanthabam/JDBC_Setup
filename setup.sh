@@ -1,5 +1,5 @@
 sudo apt update
-echo "Downloadin dependencies ..."
+echo "Downloading dependencies ..."
 sudo apt install openjdk-8-jdk-headless
 sudo apt install mysql-server
 echo "Installing php and MySQL driver ..."
