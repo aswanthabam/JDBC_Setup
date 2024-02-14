@@ -1,9 +1,8 @@
 sudo apt update
 echo "Downloading dependencies ..."
-sudo apt install openjdk-8-jdk-headless
-sudo apt install mysql-server
+sudo apt install openjdk-8-jdk-headless mysql-server -y
 echo "Installing php and MySQL driver ..."
-sudo apt install php php-mysqlnd
+sudo apt install php php-mysqlnd -y
 wget https://raw.githubusercontent.com/aswanthabam/JDBC_Setup/main/mysql.sql -P ./ -O mysql.sql
 sudo mysql < ./mysql.sql
 rm mysql.sql
