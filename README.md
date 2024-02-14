@@ -6,6 +6,7 @@ This will do the following :
 
 - Install Java 8
 - Install MySql
+- Install php and php-mysqlnd
 - Download and setup mysql-connector
 - Create user for MySQL with all permissions
     - Username : gct
