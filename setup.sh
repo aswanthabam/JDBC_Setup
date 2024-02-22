@@ -22,3 +22,4 @@ wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.86/bin/apache-tomcat-9.0.86.z
 unzip "apache-tomcat-9.0.86"
 mv apache-tomcat-9.0.86 tomcat
 echo "export CLASSPATH=$CLASSPATH:~/tomcat/lib/*" >> ~/.bashrc
+sudo chmod +x tomcat/bin/*
