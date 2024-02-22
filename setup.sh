@@ -19,6 +19,6 @@ echo "export CLASSPATH=$CLASSPATH:/usr/local/lib/mysql-connector-j-8.1.0/mysql-c
 
 echo "Downloadig tomcat ..."
 sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.86/bin/apache-tomcat-9.0.86.zip -P ~/
-sudo unzip "~/apache-tomcat-9.0.86.zip" -d "~/"
+sudo unzip "~/apache-tomcat-9.0.86" -d "~/"
 mv apache-tomcat-9.0.86 tomcat
 echo "export CLASSPATH=$CLASSPATH:~/apache-tomcat-9.0.86/lib/*" >> ~/.bashrc
