@@ -123,3 +123,6 @@ else
 fi
 
 echo -e "\u001b[34mNB: To use the installed java programs you need to execute the programs in a new terminal!"
+echo -e "\u001b[33m ----------------------------"
+echo -e " -------- With ♥ AVC --------"
+echo -e " ----------------------------"
