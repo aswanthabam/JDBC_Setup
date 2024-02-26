@@ -19,4 +19,5 @@ Just copy this and paste it on your terminal.
 ```bash
 wget https://raw.githubusercontent.com/aswanthabam/JDBC_Setup/main/setup.sh
 bash setup.sh
+rm setup.sh
 ```
