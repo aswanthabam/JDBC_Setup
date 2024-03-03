@@ -12,6 +12,8 @@ sudo apt install php -y
 e_php=$?
 sudo apt install php-mysqlnd -y
 e_php2=$?
+sudo apt install python python3-tkinter -y
+e_python=$?
 wget https://raw.githubusercontent.com/aswanthabam/JDBC_Setup/main/mysql.sql -P ./ -O mysql.sql
 e_sql2=$?
 sudo mysql < ./mysql.sql
@@ -71,7 +73,11 @@ if [ $e_php2 -ne 0 ];then
 else
   echo -e "\u001b[32m + Installed PHP MySQL Driver"
 fi
-
+if [ $e_python -ne 0 ];then
+  echo -e "\u001b[31m - Error installing Python and Tkinter"
+else
+  echo -e "\u001b[32m + Installed Python and Tkinter"
+fi
 if [ $e_sql2 -ne 0 ];then
   echo -e "\u001b[31m - Error Downloading SQL initialization script"
 else
