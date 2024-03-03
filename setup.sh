@@ -12,7 +12,7 @@ sudo apt install php -y
 e_php=$?
 sudo apt install php-mysqlnd -y
 e_php2=$?
-sudo apt install python3 python3-tk -y
+sudo apt install python3 python3-tk python3-pip -y
 e_python=$?
 pip install matplotlib
 e_matplotlib=$?
