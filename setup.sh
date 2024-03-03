@@ -16,6 +16,18 @@ sudo apt install python3 python3-tk python3-pip -y
 e_python=$?
 pip install matplotlib
 e_matplotlib=$?
+pip install mysql-connector-python
+e_python_mysql=$?
+python_path=$(which python3)
+if [[ $python_path == *3 ]];then
+  ln -s $python_path ${python_path%?}
+  e_python_sym=$?
+  echo "Python symbolic link set"
+else
+  e_python_sym=1
+fi
+
+
 wget https://raw.githubusercontent.com/aswanthabam/JDBC_Setup/main/mysql.sql -P ./ -O mysql.sql
 e_sql2=$?
 sudo mysql < ./mysql.sql
@@ -23,10 +35,7 @@ e_sql3=$?
 rm mysql.sql
 $username="gct"
 $password="password"
-# echo -n "Enter username for mysql: "
-# read username
-# echo -n "Enter password for mysql: "
-# read password
+
 
 echo "Downloading driver..."
 
@@ -84,6 +93,16 @@ if [ $e_matplotlib -ne 0 ];then
   echo -e "\u001b[31m - Error installing Matplotlib (python)"
 else
   echo -e "\u001b[32m + Installed Matplotlib (python)"
+fi
+if [ $e_python_mysql -ne 0 ];then
+  echo -e "\u001b[31m - Error installing Mysql Connector (python)"
+else
+  echo -e "\u001b[32m + Installed Mysql Connector (python)"
+fi
+if [ $e_python_sym -ne 0 ];then
+  echo -e "\u001b[31m - Error setting symbolic link for python3 -> python"
+else
+  echo -e "\u001b[32m + Setted symbolic link for python3 -> python"
 fi
 if [ $e_sql2 -ne 0 ];then
   echo -e "\u001b[31m - Error Downloading SQL initialization script"
