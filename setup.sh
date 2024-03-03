@@ -20,7 +20,7 @@ pip install mysql-connector-python
 e_python_mysql=$?
 python_path=$(which python3)
 if [[ $python_path == *3 ]];then
-  ln -s $python_path ${python_path%?}
+  sudo ln -s $python_path ${python_path%?}
   e_python_sym=$?
   echo "Python symbolic link set"
 else
