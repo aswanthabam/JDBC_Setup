@@ -21,3 +21,11 @@ wget https://raw.githubusercontent.com/aswanthabam/JDBC_Setup/main/setup.sh
 bash setup.sh
 rm setup.sh
 ```
+
+#### For installing tally ERP 9, 6.6.3
+
+```bash
+wget https://raw.githubusercontent.com/aswanthabam/JDBC_Setup/main/tally-setup.sh
+bash tally-setup.sh
+rm tally-setup.sh
+```
