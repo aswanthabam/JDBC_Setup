@@ -20,3 +20,6 @@ if [ $e_setup -ne 0 ];then
 else
   echo -e "\u001b[32m + Setup started"
 fi
+echo -e "\u001b[33m ----------------------------"
+echo -e " -------- With ♥ AVC --------"
+echo -e " ----------------------------"
