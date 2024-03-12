@@ -1,6 +1,6 @@
 wget https://tallymirror.tallysolutions.com/download_centre/R6.6.3_GA/TE9/Full/setup.exe
 e_d=$?
-sudo apt install wine
+sudo apt install wine -y
 e_wine=$?
 wine setup.exe
 e_setup=$?
